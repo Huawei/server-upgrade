@@ -1,4 +1,5 @@
 ---
 # defaults file for huawei.ibmc
 
+# default HSU Tool root path
 hsu_root: /usr/local/HuaWei-HSU
