@@ -4,6 +4,8 @@
 - name: "Check required variables for upgrade driver task"
   fail: msg="Variable 'taskid' is not defined"
   when: taskid not in vars
+  with_items:
+    - taskid
     
 - name: "Trace Huawei Server Driver upgrade progress"
   shell: "/usr/bin/python2 {{ hsu_root }}/HSU.py progress {{ taskid }}"

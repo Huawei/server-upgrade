@@ -6,5 +6,3 @@
 
 # Dynamic include a task base on command
 - include_tasks : "{{command}}.yml"
-
-
