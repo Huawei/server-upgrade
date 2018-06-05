@@ -1,0 +1,12 @@
+---
+  # tasks file for Adding Huawei Huop repo
+
+- name: "Add Huawei Huop repo"
+  # TODO, different os should use different repo file
+  yum_repository:
+    name: Huawei $releasever Driver
+    description: EPEL YUM repo
+    file: houp
+    baseurl: http://houp.huawei.com/download/server/Linux/Driver/Redhat/Redhat$releasever/$basearch/
+    gpgcheck: no
+

@@ -1,0 +1,14 @@
+---
+  # tasks file for query server driver upgrade progress
+
+- name: "Check required variables for upgrade driver task"
+  fail: msg="Variable 'taskid' is not defined"
+  when: taskid not in vars
+    
+- name: "Trace Huawei Server Driver upgrade progress"
+  shell: "/usr/bin/python2 {{ hsu_root }}/HSU.py progress {{ taskid }}"
+  register: result
+  changed_when: False
+
+- name: "Trace Huawei Server Driver upgrade progress Result"
+  debug: msg="{{ result.stdout | hsu }}"

@@ -1,0 +1,5 @@
+[Driver]
+gpgcheck=0
+#gpgkey=
+baseurl=http://houp.huawei.com/download/server/Linux/Driver/Redhat/$releasever/extras/$basearch/
+name=Huawei Centos Driver - $basearch

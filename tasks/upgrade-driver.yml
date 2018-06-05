@@ -1,0 +1,20 @@
+---
+# tasks file for getting server driver versions
+
+- import_tasks: add-repo.yml
+
+- name: "Check required variables for upgrade driver task"
+  fail: msg="Variable '{{ item }}' is not defined"
+  when: item not in vars
+  with_items:
+    - driver
+    - version
+
+- name: "Upgrade Huawei Server Driver"
+  shell: "/usr/bin/python2 {{ hsu_root }}/HSU.py upgrade {{ driver }} {{ version }}"
+  register: result
+  changed_when: False
+
+- name: "Upgrade Huawei Server Driver Result"
+  debug: msg="{{ result.stdout | hsu }}"
+  

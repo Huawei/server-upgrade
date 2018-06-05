@@ -1,0 +1,6 @@
+---
+  
+- hosts: localhost
+  remote_user: root
+  roles:
+    -  { role: 'huawei.ibmc', command: 'upgrade-driver',  driver: 'driver1',  version: '1.1.2' }

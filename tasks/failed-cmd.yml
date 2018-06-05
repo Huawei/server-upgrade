@@ -1,0 +1,10 @@
+---
+# tasks file for getting server driver versions
+
+- name: "Test for failed command"
+  shell: "/usr/bin/python2 {{ hsu_root }}/HSU.py failed"
+  register: result
+  changed_when: False
+
+- name: "Test for failed command Result"
+  debug: msg="{{ result.stdout | hsu }}"
