@@ -4,8 +4,7 @@
 # deploy HSU distribution to target server
 - import_tasks: deploy.yml
 
-# Run get version task only when get-version tag specified
-# Get target server driver versions
-- import_tasks: {{command}}.yml
+# Dynamic include a task base on command
+- include_tasks : "{{command}}.yml"
 
 

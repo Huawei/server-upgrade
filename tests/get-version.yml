@@ -1,6 +1,0 @@
----
-  
-- hosts: localhost
-  remote_user: root
-  roles:
-    -  { role: 'huawei.ibmc', command: 'list-driver' }
