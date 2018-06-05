@@ -33,18 +33,10 @@ galaxy_info:
   # platforms is a list of platforms, and each platform has a name and a list of versions.
   #
   platforms:
-  - name: Redhat
+  - name: EL
     versions:
-    - 6.9
-    - 7.1
-    - 7.2
-    - 7.3
-  - name: CentOS
-    versions:
-    - 6.9
-    - 7.1
-    - 7.2
-    - 7.3
+    - 6
+    - 7
 
   galaxy_tags: ['huawei', 'server-management']
     # List tags for your role here, one per line. A tag is a keyword that describes
