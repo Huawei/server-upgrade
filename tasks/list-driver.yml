@@ -1,5 +1,5 @@
 ---
-  # tasks file for getting server driver versions
+  # tasks file for listing target server driver versions
 
 - name: "Gather Huawei Server Driver versions"
   shell: "/usr/bin/python2 {{ hsu_root }}/HSU.py version"

@@ -6,25 +6,6 @@
 
 # Run get version task only when get-version tag specified
 # Get target server driver versions
-- import_tasks: get-versions.yml
-  when: (command is defined and command == 'list-driver')
-  tags:
-    - versions
+- import_tasks: {{command}}.yml
 
-# Upgrade target server driver version
-- import_tasks: upgrade-driver.yml
-  when: (command is not defined or command == 'upgrade-driver')
-  tags:
-    - upgrade
 
-# Query target server driver Upgrade progress
-- import_tasks: upgrade-progress.yml
-  when: (command is defined and command == 'upgrade-progress')
-  tags:
-    - progress
-
-# Only for test purpose, should be removed later
-- import_tasks: failed-cmd.yml
-  when: (command is defined and command == 'failed-cmd')
-  tags:
-    - failed

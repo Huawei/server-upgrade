@@ -1,5 +1,5 @@
 ---
-# tasks file for getting server driver versions
+# tasks file for testing failed command
 
 - name: "Test for failed command"
   shell: "/usr/bin/python2 {{ hsu_root }}/HSU.py failed"
