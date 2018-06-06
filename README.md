@@ -63,6 +63,4 @@ License
 Apache 2.0
 
 
-## Links
-
 [ansible]:  https://ansible.com/    "Ansible"
