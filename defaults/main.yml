@@ -3,3 +3,12 @@
 
 # default HSU Tool root path
 hsu_root: /usr/local/HuaWei-HSU
+
+# default base-url for repo
+hsu_repo:
+  CentOS: 
+    baseurl: http://houp.huawei.com/download/server/Linux/Driver/CentOS/$releasever/$basearch/current/
+    gpgcheck: no
+  Redhat: 
+    baseurl: http://houp.huawei.com/download/server/Linux/Driver/Redhat/Redhat$releasever/$basearch/current/
+    gpgcheck: no
