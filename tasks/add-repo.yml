@@ -6,5 +6,5 @@
     name: Huawei $releasever Driver
     description: Huawei houp YUM repo
     file: houp
-    baseurl: "{{ hsu_repo[ansible_distribution][baseurl] }}"
-    gpgcheck: "{{ hsu_repo[ansible_distribution][gpgcheck] }}"
+    baseurl: "{{ repo_baseurl | default(hsu_repo[ansible_distribution]['baseurl']) }}"
+    gpgcheck: "{{ repo_gpgcheck | default(hsu_repo[ansible_distribution]['gpgcheck']) }}"

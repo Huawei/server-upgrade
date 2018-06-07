@@ -3,4 +3,11 @@
 - hosts: localhost
   remote_user: root
   roles:
-    -  { role: 'huawei.server-manager', command: 'upgrade-driver',  driver: 'driver1',  version: '1.1.2' }
+    - role: 'huawei.server-manager'
+      command: 'upgrade-driver'
+      driver: 'driver1'
+      version: '1.1.2'
+      # optional, default huawei houp repo
+      repo_baseurl: http://houp.huawei.com/xxxx 
+      # optional, default no
+      repo_gpgcheck: yes
