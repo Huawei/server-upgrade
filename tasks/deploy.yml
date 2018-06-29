@@ -6,6 +6,11 @@
     state: directory
     path: "{{ hsu_root }}"
 
+- name: "Ensure unzip tool installed"
+  yum:
+    name: unzip
+    state: present
+
 - name: "Deploy Huawei Server Upgrade Tool"
   unarchive:
     copy=yes
