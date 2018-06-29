@@ -8,7 +8,7 @@
     - taskid
     
 - name: "Trace Huawei Server Driver upgrade progress"
-  shell: "/usr/bin/python2 {{ hsu_root }}/HSU.py progress {{ taskid }}"
+  shell: "/bin/sh {{ hsu_root }}/bin/hsu progress {{ taskid }} --format=json"
   register: result
   changed_when: False
 

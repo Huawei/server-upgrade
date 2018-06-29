@@ -2,7 +2,7 @@
   # tasks file for listing target server driver versions
 
 - name: "Gather Huawei Server Driver versions"
-  shell: "/bin/sh {{ hsu_root }}/bin/hsu verify"
+  shell: "/bin/sh {{ hsu_root }}/bin/hsu verify --format=json"
   register: result
   changed_when: False
 

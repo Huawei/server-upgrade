@@ -1,6 +1,6 @@
 ---
   
-- hosts: localhost
+- hosts: servers
   remote_user: root
   roles:
     - role: 'huawei.server-manager'
