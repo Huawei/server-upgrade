@@ -21,7 +21,7 @@ def plain(drivers):
     convert drivers to plain string
     '''
     if drivers and len(drivers) > 0:
-        return [driver.join(' ') for driver in drivers].join(' ')
+        return ' '.join([' '.join(driver) for driver in drivers])
     else:
         return ''
 
