@@ -1,5 +1,7 @@
 ---
-  # tasks file for listing target server driver versions
+# tasks file for listing target server driver versions
+
+- import_tasks: add-repo.yml
 
 - name: "Gather Huawei Server Driver versions"
   shell: "/bin/sh {{ hsu_root }}/bin/hsu verify --format=json"
