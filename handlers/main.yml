@@ -3,6 +3,6 @@
 
 - name: Remove Huawei Server Upgrade Tool
   file:
-    state: present
+    state: file
     path: "{{ hsu_root }}/"
   when: (hsu_root is defined and hsu_root != "")
