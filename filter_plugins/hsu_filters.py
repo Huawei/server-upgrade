@@ -16,6 +16,15 @@ def hsu(output_str=''):
     
     return None
 
+def plain(drivers):
+    '''
+    convert drivers to plain string
+    '''
+    if drivers and len(drivers) > 0:
+        return [driver.join(' ') for driver in drivers].join(' ')
+    else:
+        return ''
+
 
 class FilterModule(object):
     '''

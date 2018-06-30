@@ -5,9 +5,11 @@
   roles:
     - role: 'huawei.server-manager'
       command: 'upgrade-driver'
-      driver: 'driver1'
-      version: '1.1.2'
+      # the driver list to be upgraded
+      drivers: 
+        - ['driver1', 'driver1-version']
+        - ['driver2', 'driver2-version']
       # optional, default huawei houp repo
-      # repo_baseurl: http://houp.huawei.com/xxxx 
+      # repo_baseurl: http://houp.huawei.com/download/server/Linux/Driver/Redhat/Rhel$releasever/$basearch/current/
       # optional, default no
       # repo_gpgcheck: yes
