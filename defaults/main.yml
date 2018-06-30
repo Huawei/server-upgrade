@@ -10,5 +10,5 @@ hsu_repo:
     baseurl: http://houp.huawei.com/download/server/Linux/Driver/CentOS/$releasever/$basearch/current/
     gpgcheck: no
   Redhat: 
-    baseurl: http://houp.huawei.com/download/server/Linux/Driver/Redhat/Redhat$releasever/$basearch/current/
+    baseurl: http://houp.huawei.com/download/server/Linux/Driver/Redhat/Rhel$releasever/$basearch/current/
     gpgcheck: no
