@@ -8,6 +8,6 @@
       driver: 'driver1'
       version: '1.1.2'
       # optional, default huawei houp repo
-      repo_baseurl: http://houp.huawei.com/xxxx 
+      # repo_baseurl: http://houp.huawei.com/xxxx 
       # optional, default no
-      repo_gpgcheck: yes
+      # repo_gpgcheck: yes

@@ -11,7 +11,7 @@
     - version
 
 - name: "Upgrade Huawei Server Driver"
-  shell: "/bin/sh {{ hsu_root }}/bin/hsu upgrade {{ driver }} {{ version }} --format=json"
+  shell: "/bin/sh {{ hsu_root }}/bin/hsu verify && /bin/sh {{ hsu_root }}/bin/hsu upgrade {{ driver }} {{ version }} --format=json"
   register: result
   changed_when: False
 
