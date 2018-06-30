@@ -11,13 +11,12 @@
     name: unzip
     state: present
 
-# TODO
-# - name: "Deploy Huawei Server Upgrade Tool"
-#   unarchive:
-#     copy=yes
-#     src="HSU.zip"
-#     dest="{{ hsu_root }}"
-#     mode=0644
-#   #  creates="{{ hsu_root }}/HSU.py"
-#   changed_when: True
-#   notify: Remove Huawei Server Upgrade Tool
+- name: "Deploy Huawei Server Upgrade Tool"
+  unarchive:
+    copy=yes
+    src="HSU.zip"
+    dest="{{ hsu_root }}"
+    mode=0644
+  #  creates="{{ hsu_root }}/HSU.py"
+  changed_when: True
+  notify: Remove Huawei Server Upgrade Tool

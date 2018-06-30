@@ -13,7 +13,7 @@
 - include_tasks: list-driver.yml
 
 - name: "Upgrade Huawei Server Driver"
-  shell: "/bin/sh {{ hsu_root }}/bin/hsu upgrade {{ drivers | plain}} --format=json"
+  shell: "/bin/sh {{ hsu_root }}/bin/hsu upgrade {{ drivers | default([]) | plain}} --format=json"
   register: result
   changed_when: False
 
