@@ -33,5 +33,6 @@ class FilterModule(object):
 
     def filters(self):
         return {
-            'hsu': hsu
+            'hsu': hsu,
+            'plain': plain
         }
