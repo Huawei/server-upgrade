@@ -13,8 +13,9 @@ def hsu(output_str=''):
             return output['data']
         else:
             return output['msg']
-    
+
     return None
+
 
 def plain(drivers):
     '''
