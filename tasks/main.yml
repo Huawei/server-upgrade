@@ -5,4 +5,4 @@
 - import_tasks: deploy.yml
 
 # Dynamic include a task base on command
-- include_tasks : "{{command}}.yml"
+- include_tasks: "{{command}}.yml"

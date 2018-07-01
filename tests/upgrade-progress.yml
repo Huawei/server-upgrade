@@ -3,4 +3,4 @@
 - hosts: servers
   remote_user: root
   roles:
-    -  { role: 'huawei.server-manager', command: 'upgrade-progress', taskid: 'task-id' }
+    - { role: 'huawei.server-manager', command: 'upgrade-progress', taskid: 'task-id' }
