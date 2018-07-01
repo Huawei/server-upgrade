@@ -3,4 +3,4 @@
 - hosts: servers
   remote_user: root
   roles:
-    - { role: 'huawei.server-manager', command: 'list-driver', repo_baseurl: 'http://houp.huawei.com/download/server/Linux/Driver/Redhat/Rhel$releasever/$basearch/current/' }
+    - { role: 'IamFive.Huawei-Server-Ansible-Roles', command: 'list-driver', repo_baseurl: 'http://houp.huawei.com/download/server/Linux/Driver/Redhat/Rhel$releasever/$basearch/current/' }

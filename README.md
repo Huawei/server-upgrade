@@ -51,7 +51,7 @@ Example Playbook
 - hosts: localhost
   remote_user: root
   roles:
-    - role: 'huawei.server-manager'
+    - role: 'IamFive.Huawei-Server-Ansible-Roles'
       command: 'upgrade-driver'
       # optional, default upgrade all driver and firmware
       drivers: 
