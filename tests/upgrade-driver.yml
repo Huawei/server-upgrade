@@ -3,7 +3,7 @@
 - hosts: servers
   remote_user: root
   roles:
-    - role: 'IamFive.Huawei-Server-Ansible-Roles'
+    - role: 'IamFive.server-upgrade'
       command: 'upgrade-driver'
       # the driver list to be upgraded
       drivers: 
