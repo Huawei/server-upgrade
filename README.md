@@ -40,7 +40,7 @@ Example Playbook
 
 - hosts: servers
   roles:
-    - { role: 'IamFive.server-upgrade', command: 'list-driver',  repo_baseurl: 'http://houp.huawei.com/download/server/Linux/Driver/Redhat/Rhel$releasever/$basearch/current/' }
+    - { role: 'IamFive.server_upgrade', command: 'list-driver',  repo_baseurl: 'http://houp.huawei.com/download/server/Linux/Driver/Redhat/Rhel$releasever/$basearch/current/' }
 ```
 
 - upgrade driver versions:
@@ -51,7 +51,7 @@ Example Playbook
 - hosts: localhost
   remote_user: root
   roles:
-    - role: 'IamFive.server-upgrade'
+    - role: 'IamFive.server_upgrade'
       command: 'upgrade-driver'
       # optional, default upgrade all driver and firmware
       drivers: 
@@ -71,7 +71,7 @@ Example Playbook
 
 - hosts: servers
   roles:
-    - { role: 'IamFive.server-upgrade', command: 'upgrade-progress', taskid: 'task-id' }
+    - { role: 'IamFive.server_upgrade', command: 'upgrade-progress', taskid: 'task-id' }
 ```
 
 License

@@ -3,7 +3,7 @@
 - hosts: servers
   remote_user: root
   roles:
-    - role: 'IamFive.server-upgrade'
+    - role: 'IamFive.server_upgrade'
       command: 'upgrade-driver'
       # the driver list to be upgraded
       drivers: 

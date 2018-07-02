@@ -3,4 +3,4 @@
 - hosts: servers
   remote_user: root
   roles:
-    - { role: 'IamFive.server-upgrade', command: 'upgrade-progress', taskid: 'task-id' }
+    - { role: 'IamFive.server_upgrade', command: 'upgrade-progress', taskid: 'task-id' }
