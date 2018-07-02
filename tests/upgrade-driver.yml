@@ -6,8 +6,8 @@
     - role: 'IamFive.server_upgrade'
       command: 'upgrade-driver'
       # the driver list to be upgraded
-      drivers: 
-        - ['raid', '0.0.013']
+      #drivers: 
+        # - ['raid', '0.0.013']
         # - ['driver1', 'driver1-version']
         # - ['driver2', 'driver2-version']
       # optional, default huawei houp repo
