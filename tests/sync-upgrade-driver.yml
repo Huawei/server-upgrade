@@ -1,0 +1,12 @@
+---
+  
+- hosts: servers
+  remote_user: root
+  roles:
+    - role: 'IamFive.server_upgrade'
+      command: 'sync-upgrade-driver'
+      # optional, default huawei houp repo
+      # because houp repo is not ready for CentOS, we use rhel instead for testing
+      repo_baseurl: http://houp.huawei.com/download/server/Linux/Driver/Redhat/Rhel$releasever/$basearch/current/
+      # optional, default no
+      # repo_gpgcheck: yes

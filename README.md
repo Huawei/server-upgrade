@@ -20,6 +20,10 @@ Role Variables
 --------------
 
 - **command**: what command of the role expected to run.
+  - sync-upgrade-driver: upgrade server driver sync
+  - list-driver: list server driver version
+  - upgrade-driver: upgrade server driver rsync
+  - upgrade-progress: get upgrade task progress
 - **drivers**: a list of name/version for the drivers to be upgraded (used when command is `upgrade-driver`).
 - **repo_baseurl**: driver yum repo baseurl (used when command is `list-driver` or `upgrade-driver`).
 - **repo_gpgcheck**: driver yum repo gpgcheck [yes|no] (used when command is `list-driver` or `upgrade-driver`).
@@ -32,6 +36,23 @@ None.
 
 Example Playbook
 ----------------
+
+- upgrade driver versions sync:
+
+```
+---
+  
+- hosts: servers
+  remote_user: root
+  roles:
+    - role: 'IamFive.server_upgrade'
+      command: 'sync-upgrade-driver'
+      # optional, default huawei houp repo
+      repo_baseurl: http://houp.huawei.com/download/server/Linux/Driver/Redhat/Rhel$releasever/$basearch/current/
+      # optional, default no
+      # repo_gpgcheck: yes
+```
+
 
 - list driver versions:
 
