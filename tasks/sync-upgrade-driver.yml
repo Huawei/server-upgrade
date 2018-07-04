@@ -1,8 +1,6 @@
 ---
 # tasks file for Upgrade target server driver version
 
-- import_tasks: add-repo.yml
-
 - name: "Sync Upgrade Huawei Server Driver"
   shell: "/bin/sh {{ hsu_root }}/bin/hsu sync-upgrade --format=json"
   register: result
@@ -10,4 +8,5 @@
 
 - name: "Upgrade Huawei Server Driver Result"
   debug: msg="{{ result.stdout | hsu }}"
+  notify: Remove Huawei Server Upgrade Tool
   
