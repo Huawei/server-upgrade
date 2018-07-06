@@ -1,4 +1,5 @@
 ---
+# test tasks file for how to upgrade drivers
   
 - hosts: servers
   remote_user: root
@@ -6,15 +7,8 @@
     - role: 'IamFive.server_upgrade'
       command: 'upgrade'
       # the driver list to be upgraded
-      #drivers: 
-        # - ['raid', '0.0.013']
-        # - ['driver1', 'driver1-version']
-        # - ['driver2', 'driver2-version']
-      #inbandFW:
-        # - ['firmware1', 'version1']
-        # - ['firmware2', 'version2']
-      #outbandFW:
-        # - ['firmware1', 'version1']
+      outbandFW: 
+        - ['firmware1', 'version1']
         # - ['firmware2', 'version2']
       # optional, default huawei houp repo
       # because houp repo is not ready for CentOS, we use rhel instead for testing
