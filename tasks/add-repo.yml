@@ -3,7 +3,7 @@
 
 - name: "Add Huawei Huop repo"
   yum_repository:
-    name: Huawei $releasever Driver
+    name: Huawei-$releasever-Driver
     description: Huawei houp YUM repo
     file: houp
     baseurl: "{{ repo_baseurl | default(hsu_repo[ansible_distribution]['baseurl']) }}"
