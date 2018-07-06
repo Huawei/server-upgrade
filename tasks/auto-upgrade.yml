@@ -2,7 +2,7 @@
 # tasks file for Upgrade target server driver version
 
 - name: "Sync Upgrade Huawei Server Driver"
-  shell: "/bin/sh {{ hsu_root }}/bin/hsu sync-upgrade --format=json"
+  shell: "/bin/sh {{ hsu_root }}/bin/hsu auto-upgrade --format=json"
   register: result
   changed_when: False
 

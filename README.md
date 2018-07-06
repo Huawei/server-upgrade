@@ -20,13 +20,15 @@ Role Variables
 --------------
 
 - **command**: what command of the role expected to run.
-  - sync-upgrade-driver: upgrade server driver sync
-  - list-driver: list server driver version
-  - upgrade-driver: upgrade server driver rsync
+  - auto-upgrade: upgrade server driver sync
+  - upgrade-list: list server driver version
+  - upgrade: upgrade server driver rsync
   - upgrade-progress: get upgrade task progress
-- **drivers**: a list of name/version for the drivers to be upgraded (used when command is `upgrade-driver`).
-- **repo_baseurl**: driver yum repo baseurl (used when command is `list-driver` or `upgrade-driver`).
-- **repo_gpgcheck**: driver yum repo gpgcheck [yes|no] (used when command is `list-driver` or `upgrade-driver`).
+- **drivers**: a list of name/version for the drivers to be upgraded (used when command is `upgrade`).
+- **inbandFW**: a list of name/version for the inband firmware to be upgraded (used when command is `upgrade`).
+- **outbandFW**: a list of name/version for the inband firmware to be upgraded (used when command is `upgrade`).
+- **repo_baseurl**: driver yum repo baseurl (used when command is `upgrade-list` or `upgrade`).
+- **repo_gpgcheck**: driver yum repo gpgcheck [yes|no] (used when command is `upgrade-list` or `upgrade`).
 - **taskid**: async task-id of the upgrade driver task (used when command is `upgrade-progress`)
 
 Dependencies
@@ -46,7 +48,7 @@ Example Playbook
   remote_user: root
   roles:
     - role: 'IamFive.server_upgrade'
-      command: 'sync-upgrade-driver'
+      command: 'auto-upgrade'
       # optional, default huawei houp repo
       repo_baseurl: http://houp.huawei.com/download/server/Linux/Driver/Redhat/Rhel$releasever/$basearch/current/
       # optional, default no
@@ -61,7 +63,7 @@ Example Playbook
 
 - hosts: servers
   roles:
-    - { role: 'IamFive.server_upgrade', command: 'list-driver',  repo_baseurl: 'http://houp.huawei.com/download/server/Linux/Driver/Redhat/Rhel$releasever/$basearch/current/' }
+    - { role: 'IamFive.server_upgrade', command: 'upgrade-list',  repo_baseurl: 'http://houp.huawei.com/download/server/Linux/Driver/Redhat/Rhel$releasever/$basearch/current/' }
 ```
 
 - upgrade driver versions:
@@ -73,7 +75,7 @@ Example Playbook
   remote_user: root
   roles:
     - role: 'IamFive.server_upgrade'
-      command: 'upgrade-driver'
+      command: 'upgrade'
       # optional, default upgrade all driver and firmware
       drivers: 
         - ['driver1', 'driver1-version']

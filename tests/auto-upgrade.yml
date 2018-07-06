@@ -4,12 +4,7 @@
   remote_user: root
   roles:
     - role: 'IamFive.server_upgrade'
-      command: 'upgrade-driver'
-      # the driver list to be upgraded
-      #drivers: 
-        # - ['raid', '0.0.013']
-        # - ['driver1', 'driver1-version']
-        # - ['driver2', 'driver2-version']
+      command: 'auto-upgrade'
       # optional, default huawei houp repo
       # because houp repo is not ready for CentOS, we use rhel instead for testing
       repo_baseurl: http://houp.huawei.com/download/server/Linux/Driver/Redhat/Rhel$releasever/$basearch/current/
