@@ -27,8 +27,8 @@ Role Variables
 - **drivers**: a list of name/version for the drivers to be upgraded (used when command is `upgrade`).
 - **inbandFW**: a list of name/version for the inband firmware to be upgraded (used when command is `upgrade`).
 - **outbandFW**: a list of name/version for the inband firmware to be upgraded (used when command is `upgrade`).
-- **repo_baseurl**: driver yum repo baseurl (used when command is `upgrade-list` or `upgrade`).
-- **repo_gpgcheck**: driver yum repo gpgcheck [yes|no] (used when command is `upgrade-list` or `upgrade`).
+- **driver_repo_baseurl**: driver yum repo baseurl (used when command is `upgrade-list` or `upgrade`).
+- **driver_repo_gpgcheck**: driver yum repo gpgcheck [yes|no] (used when command is `upgrade-list` or `upgrade`).
 - **taskid**: async task-id of the upgrade driver task (used when command is `upgrade-progress`)
 
 Dependencies
@@ -50,9 +50,9 @@ Example Playbook
     - role: 'IamFive.server_upgrade'
       command: 'auto-upgrade'
       # optional, default huawei houp repo
-      repo_baseurl: http://houp.huawei.com/download/server/Linux/Driver/Redhat/Rhel$releasever/$basearch/current/
+      driver_repo_baseurl: http://houp.huawei.com/download/server/Linux/Driver/Redhat/Rhel$releasever/$basearch/current/
       # optional, default no
-      # repo_gpgcheck: yes
+      # driver_repo_gpgcheck: yes
 ```
 
 
@@ -63,7 +63,7 @@ Example Playbook
 
 - hosts: servers
   roles:
-    - { role: 'IamFive.server_upgrade', command: 'upgrade-list',  repo_baseurl: 'http://houp.huawei.com/download/server/Linux/Driver/Redhat/Rhel$releasever/$basearch/current/' }
+    - { role: 'IamFive.server_upgrade', command: 'upgrade-list',  driver_repo_baseurl: 'http://houp.huawei.com/download/server/Linux/Driver/Redhat/Rhel$releasever/$basearch/current/' }
 ```
 
 - upgrade driver versions:
@@ -81,9 +81,9 @@ Example Playbook
         - ['driver1', 'driver1-version']
         - ['driver2', 'driver2-version']
       # optional, default huawei houp repo
-      repo_baseurl: http://houp.huawei.com/download/server/Linux/Driver/Redhat/Rhel$releasever/$basearch/current/
+      driver_repo_baseurl: http://houp.huawei.com/download/server/Linux/Driver/Redhat/Rhel$releasever/$basearch/current/
       # optional, default no
-      repo_gpgcheck: yes
+      driver_repo_gpgcheck: yes
 ```
 
 

@@ -13,6 +13,6 @@
         # - ['firmware2', 'version2']
       # optional, default huawei houp repo
       # because houp repo is not ready for CentOS, we use rhel instead for testing
-      repo_baseurl: http://houp.huawei.com/download/server/Linux/Driver/Redhat/Rhel$releasever/$basearch/current/
+      driver_repo_baseurl: http://houp.huawei.com/download/server/Linux/Driver/Redhat/Rhel7.4/$basearch/current/
       # optional, default no
-      # repo_gpgcheck: yes
+      # driver_repo_gpgcheck: yes

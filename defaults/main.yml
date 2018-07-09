@@ -6,9 +6,15 @@ hsu_root: /usr/local/HuaWei-HSU
 
 # default base-url for repo
 hsu_repo:
+  # driver repo default configs for CentOS
   CentOS: 
     baseurl: http://houp.huawei.com/download/server/Linux/Driver/CentOS/$releasever/$basearch/current/
     gpgcheck: no
+  # driver repo default configs for RedHat
   RedHat:
     baseurl: http://houp.huawei.com/download/server/Linux/Driver/Redhat/Rhel$releasever/$basearch/current/
+    gpgcheck: no
+  # firmware repo default configs
+  firmware:
+    baseurl: http://houp.huawei.com/download/server/Linux/firmware/current/
     gpgcheck: no

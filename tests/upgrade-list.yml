@@ -3,4 +3,4 @@
 - hosts: servers
   remote_user: root
   roles:
-    - { role: 'IamFive.server_upgrade', command: 'upgrade-list', repo_baseurl: 'http://houp.huawei.com/download/server/Linux/Driver/Redhat/Rhel$releasever/$basearch/current/' }
+    - { role: 'IamFive.server_upgrade', command: 'upgrade-list', driver_repo_baseurl: 'http://houp.huawei.com/download/server/Linux/Driver/Redhat/Rhel7.4/$basearch/current/' }
