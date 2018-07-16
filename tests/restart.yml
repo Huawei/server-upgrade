@@ -1,0 +1,8 @@
+---
+
+# test tasks file for how to upgrade outband
+
+- hosts: servers
+  remote_user: root
+  roles:
+    - { role: 'IamFive.server_upgrade', command: 'restart' }

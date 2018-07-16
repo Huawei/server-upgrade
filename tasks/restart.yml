@@ -1,0 +1,10 @@
+---
+# tasks file for deploy Huawei Server Upgrade tool
+
+- name: "Restart Server"
+  shell: "/bin/sh {{ hsu_root }}/bin/hsu restart --format=json"
+  register: result
+  changed_when: False
+
+- name: "Display restart Huawei Server Driver result"
+  debug: msg="{{ result.stdout | hsu }}"
