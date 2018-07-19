@@ -6,5 +6,5 @@
   register: result
   changed_when: False
 
-- name: "Display restart Huawei Server Driver result"
+- name: "Display restart Huawei Server result"
   debug: msg="{{ result.stdout | hsu }}"
