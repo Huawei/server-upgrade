@@ -1,10 +1,13 @@
 ---
 # tasks file for listing target server driver versions
 
-- name: "Gather Huawei Server Driver versions"
+# deploy houp repo to target server
+- import_tasks: add-repo.yml
+
+- name: "Gather Huawei Server upgrade list"
   shell: "/bin/sh {{ hsu_root }}/bin/hsu verify --format=json"
   register: result
   changed_when: False
 
-- name: "Display Huawei Server Driver versions"
+- name: "Display Huawei Server upgrade list"
   debug: msg="{{ result.stdout | hsu }}"

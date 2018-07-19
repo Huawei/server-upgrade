@@ -1,9 +1,6 @@
 ---
 # tasks file for huawei.ibmc
 
-# deploy houp repo to target server
-- import_tasks: add-repo.yml
-
 # deploy HSU distribution to target server
 - import_tasks: deploy.yml
 

@@ -1,6 +1,9 @@
 ---
 # tasks file for Upgrade target server driver version
 
+# deploy houp repo to target server
+- import_tasks: add-repo.yml
+
 - name: "Sync Upgrade Huawei Server Driver"
   shell: "/bin/sh {{ hsu_root }}/bin/hsu auto-upgrade --format=json"
   register: result
