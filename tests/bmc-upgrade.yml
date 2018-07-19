@@ -6,7 +6,7 @@
   remote_user: root
   roles:
     - role: 'IamFive.server_upgrade'
-      command: 'upgrade'
+      command: 'auto-upgrade'
       # the driver list to be upgraded
       outbandFW: 
         - ['firmware1', 'version1']
