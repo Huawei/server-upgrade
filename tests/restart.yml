@@ -1,6 +1,6 @@
 ---
 
-# test tasks file for how to upgrade outband
+# test tasks file for how to restart server
 
 - hosts: servers
   remote_user: root

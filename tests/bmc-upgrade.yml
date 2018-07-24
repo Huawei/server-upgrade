@@ -1,6 +1,6 @@
 ---
 
-# test tasks file for how to upgrade outband
+# test tasks file for how to upgrade BMC
 
 - hosts: servers
   remote_user: root
@@ -12,8 +12,7 @@
         - ['firmware1', 'version1']
         # - ['firmware2', 'version2']
       # optional, default huawei houp repo
-      # because houp repo is not ready for CentOS, we use rhel instead for testing
-      driver_repo_baseurl: http://houp.huawei.com/download/server/Linux/Driver/Redhat/Rhel7.4/$basearch/current/
+      # driver_repo_baseurl: http://houp.huawei.com/download/server/Linux/Driver/Redhat/Rhel7.4/$basearch/current/
       # optional, default no
       # driver_repo_gpgcheck: yes
       # optional, default huawei houp firmware repo 
