@@ -1,5 +1,5 @@
 ---
-# tasks file for huawei.ibmc
+# tasks file for huawei.server_upgrade
 
 # deploy HSU distribution to target server
 - import_tasks: deploy.yml

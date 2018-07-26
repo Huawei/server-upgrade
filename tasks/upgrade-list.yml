@@ -1,5 +1,5 @@
 ---
-# tasks file for listing target server driver versions
+# tasks file for listing target server upgrade list
 
 # deploy houp repo to target server
 - import_tasks: add-repo.yml
