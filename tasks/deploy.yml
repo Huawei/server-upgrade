@@ -6,15 +6,15 @@
     state: directory
     path: "{{ hsu_root }}"
 
-- name: "Ensure unzip tool installed"
+- name: "Ensure tar tool installed"
   yum:
-    name: unzip
+    name: tar
     state: present
 
 - name: "Deploy Huawei Server Upgrade Tool"
   unarchive:
     copy=yes
-    src="HSU.zip"
+    src="HSU.tar"
     dest="{{ hsu_root }}"
     mode=0644
   #  creates="{{ hsu_root }}/HSU.py"
