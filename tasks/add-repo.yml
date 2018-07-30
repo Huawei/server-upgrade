@@ -1,5 +1,5 @@
 ---
-  # tasks file for Adding Huawei Huop repo
+  # tasks file for Adding Huawei Houp repo
 
 - name: "Add Huawei Houp driver repo"
   yum_repository:
