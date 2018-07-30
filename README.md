@@ -1,4 +1,4 @@
-server-upgrade
+server-upgrade (version: 1.0.0)
 =========
 
 [Ansible][ansible] role for management of Huawei Server driver version.
