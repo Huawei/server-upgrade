@@ -5,9 +5,9 @@ server-upgrade (version: 1.0.0)
 
 With this role, you could:
 
-- list current driver versions
-- upgrade driver versions
-- query upgrade driver task progress
+- list server upgrade list
+- upgrade driver & firmware
+- Restart OS
 
 Requirements
 ------------

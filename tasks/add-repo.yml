@@ -1,7 +1,7 @@
 ---
   # tasks file for Adding Huawei Huop repo
 
-- name: "Add Huawei Huop driver repo"
+- name: "Add Huawei Houp driver repo"
   yum_repository:
     name: huawei-server-driver
     description: Huawei-$releasever-Driver
@@ -9,7 +9,7 @@
     baseurl: "{{ driver_repo_baseurl | default(hsu_repo[ansible_distribution]['baseurl']) }}"
     gpgcheck: "{{ driver_repo_gpgcheck | default(hsu_repo[ansible_distribution]['gpgcheck']) }}"
 
-- name: "Add Huawei Huop firmware repo"
+- name: "Add Huawei Houp firmware repo"
   yum_repository:
     name: huawei-server-firmware
     description: Huawei-$releasever-Firmware
