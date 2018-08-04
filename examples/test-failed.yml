@@ -1,8 +1,0 @@
----
-# test tasks file for how to upgrade inband
-
-- hosts: servers
-  remote_user: root
-  gather_facts: no
-  roles:
-    - { role: 'IamFive.server_upgrade', command: 'failed' }
