@@ -8,6 +8,8 @@
   shell: "/bin/sh {{ hsu_root }}/bin/hsu verify --format=json"
   register: result
   changed_when: False
+  failed_when: False
 
 - name: "Display Huawei Server upgrade list"
   debug: msg="{{ result.stdout | hsu }}"
+  failed_when: result.rc != 0
