@@ -1,0 +1,10 @@
+---
+# test tasks file for how to delete deployed HSU tool
+
+- hosts: servers
+  remote_user: root
+  tasks:
+  - name: Remove Huawei Server Upgrade Tool
+    file:
+      state: absent
+      path: "/usr/local/HuaWei-HSU/"
