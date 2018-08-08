@@ -21,8 +21,10 @@ def plain(drivers):
     '''
     convert drivers to plain string
     '''
+    import itertools
     if drivers and len(drivers) > 0:
-        return ' '.join([' '.join(driver) for driver in drivers])
+        flattened_list = list(itertools.chain(drivers))
+        return ' '.join(['"{0}"'.format(item) for item in flattened_list])
     else:
         return ''
 
