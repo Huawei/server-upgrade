@@ -23,7 +23,7 @@ def plain(drivers):
     '''
     import itertools
     if drivers and len(drivers) > 0:
-        flattened_list = list(itertools.chain(drivers))
+        flattened_list = list(itertools.chain(*drivers))
         return ' '.join(['"{0}"'.format(item) for item in flattened_list])
     else:
         return ''
