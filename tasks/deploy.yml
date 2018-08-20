@@ -14,7 +14,7 @@
 - name: "Deploy Huawei Server Upgrade Tool"
   unarchive:
     copy=yes
-    src="HSU.tar"
+    src="HSU.tar.gz"
     dest="{{ hsu_root }}"
     mode=0644
   #  creates="{{ hsu_root }}/HSU.py"
