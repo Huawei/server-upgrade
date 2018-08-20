@@ -17,16 +17,32 @@ def hsu(output_str=''):
     return None
 
 
-def plain(drivers):
+# def plain(drivers):
+#     '''
+#     convert drivers to plain string
+#     '''
+#     import itertools
+#     if drivers and len(drivers) > 0:
+#         flattened_list = list(itertools.chain(*drivers))
+#         return ' '.join(['"{0}"'.format(item) for item in flattened_list])
+#     else:
+#         return ''
+
+def plain(drivers, inbands, outbands):
     '''
     convert drivers to plain string
     '''
     import itertools
-    if drivers and len(drivers) > 0:
-        flattened_list = list(itertools.chain(*drivers))
+    merged = []
+    merged.extend(drivers if drivers else [])
+    merged.extend(inbands if inbands else [])
+    merged.extend(outbands if outbands else [])
+    
+    if merged and len(merged) > 0:
+        flattened_list = list(itertools.chain(*merged))
         return ' '.join(['"{0}"'.format(item) for item in flattened_list])
     else:
-        return ''
+        return 'auto'
 
 
 class FilterModule(object):

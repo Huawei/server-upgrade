@@ -5,10 +5,8 @@
 - import_tasks: add-repo.yml
 
 - name: "Auto Upgrade Huawei Server"
-  shell: /bin/sh {{ hsu_root }}/bin/hsu auto-upgrade 
-   {{ drivers | default([]) | plain}} 
-   {{ inbandFW | default([]) | plain}} 
-   {{ outbandFW | default([]) | plain}} 
+  shell: /bin/sh {{ hsu_root }}/bin/hsu upgrade
+   {{ plain(drivers, inbandFW, outbandFW) }} 
    --format=json
   register: result
   changed_when: False
