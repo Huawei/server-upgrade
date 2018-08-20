@@ -5,7 +5,7 @@ import json
 
 def hsu(output_str=''):
     '''
-    convert Huawei Server Upgrade Tool output to human-readable json
+    convert Huawei Server Upgrade Tool output to json
     '''
     output = json.loads(output_str)
     if output:
