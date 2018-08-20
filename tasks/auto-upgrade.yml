@@ -6,7 +6,7 @@
 
 - name: "Auto Upgrade Huawei Server"
   shell: /bin/sh {{ hsu_root }}/bin/hsu upgrade
-   {{ plain(drivers, inbandFW, outbandFW) }} 
+   {{ drivers | default([]) | plain(inbandFW|default([]), outbandFW|default([])) }} 
    --format=json
   register: result
   changed_when: False
