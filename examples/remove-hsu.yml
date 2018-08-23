@@ -7,7 +7,7 @@
   - name: Remove Huawei Server Upgrade Tool
     file:
       state: absent
-      path: "/usr/local/HuaWei-HSU/"
+      path: "/usr/local/huawei/HSU"
   
   - name: Remove Dirvers
     shell: "rmmod {{item}}"
