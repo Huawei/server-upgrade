@@ -4,6 +4,9 @@
 # default HSU Tool root path
 hsu_root: /usr/local/huawei/HSU
 
+# default huawei tools workspace
+huawei_root: /usr/local/huawei
+
 # default base-url for repo
 hsu_repo:
   # driver repo default configs for CentOS
