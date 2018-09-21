@@ -11,6 +11,8 @@
   
   - name: Remove Dirvers
     shell: "rmmod {{item}}"
+    args:
+      creates: /opt/huawei/ibma/config/iBMA.ini
     with_items:
       - host_veth_drv.ko
       - host_cdev_drv.ko
