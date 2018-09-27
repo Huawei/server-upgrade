@@ -10,7 +10,7 @@
       path: "/usr/local/huawei/HSU"
   
   - name: Remove Dirvers
-    shell: "lsmod | grep {{item}} && rmmod {{item}}"
+    shell: "! (grep lsmod {{item}}) || rmmod {{item}}"
     args:
       creates: /opt/huawei/ibma/config/iBMA.ini
     with_items:
