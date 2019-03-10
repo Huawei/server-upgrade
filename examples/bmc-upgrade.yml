@@ -1,0 +1,19 @@
+---
+
+# test tasks file for how to upgrade BMC
+
+- hosts: servers
+  remote_user: root
+  roles:
+    - role: 'IamFive.server_upgrade'
+      command: 'auto-upgrade'
+      # the driver list to be upgraded
+      outbandFW: 
+        - ['firmware1', 'version1']
+        # - ['firmware2', 'version2']
+      # optional, default huawei houp repo
+      # driver_repo_baseurl: http://houp.huawei.com/download/server/Linux/Driver/Redhat/Rhel7.4/$basearch/current/
+      # optional, default no
+      # driver_repo_gpgcheck: yes
+      # optional, default huawei houp firmware repo 
+      # firmware_repo_baseurl: http://houp.huawei.com/download/server/Linux/firmware/current/
